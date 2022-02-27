@@ -16,21 +16,21 @@ namespace PasswordProgram
             string inputPassword;
             bool isBoom = true;
 
-            while (tryCount-- > 0)
+            for (; tryCount > 0; tryCount--)
             {
                 switch (tryCount)
                 {
-                    case 2:
+                    case 3:
                         Console.BackgroundColor = ConsoleColor.Green;
                         Console.Clear();
                         break;
-                    case 1:
+                    case 2:
                         Console.BackgroundColor = ConsoleColor.Yellow;
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.Clear();
                         Console.WriteLine("Неверно!");
                         break;
-                    case 0:
+                    case 1:
                         Console.BackgroundColor = ConsoleColor.DarkYellow;
                         Console.Clear();
                         Console.WriteLine("Неверно!");
